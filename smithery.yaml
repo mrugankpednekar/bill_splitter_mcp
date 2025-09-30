@@ -1,9 +1,11 @@
+runtime: container
+
 name: splitfast-mcp
 displayName: SplitFast — Group Expense MCP
 description: Minimal expense splitter MCP (create_group, add_expense, balances).
 
 startCommand:
-  type: http
+  type: streamable_http
   commandFunction: |
     (config) => ({
       command: "python",
@@ -11,9 +13,8 @@ startCommand:
       env: {}
     })
 
-# Tell Smithery which port your MCP HTTP server listens on
-http:
-  port: 8080
+# Top-level port (Smithery routes traffic here)
+port: 8080
 
 configSchema:
   type: object
