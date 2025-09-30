@@ -1,0 +1,18 @@
+# smithery.yaml
+name: splitfast-mcp
+displayName: SplitFast — Group Expense MCP
+description: Minimal expense splitter MCP (create_group, add_expense, balances).
+startCommand:
+  type: stdio
+  # commandFunction is supported by Smithery to produce the run command
+  commandFunction: |
+    (config) => ({
+      command: "python",
+      args: ["server.py"],
+      env: {}
+    })
+configSchema:
+  type: object
+  properties: {}
+  additionalProperties: false
+
