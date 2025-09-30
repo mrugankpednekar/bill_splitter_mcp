@@ -1,7 +1,7 @@
+runtime: container
 name: splitfast-mcp
-displayName: SplitFast — Group Expense MCP
+displayName: SplitFast - Group Expense MCP
 description: Minimal expense splitter MCP (create_group, add_expense, balances).
-
 startCommand:
   type: streamable_http
   commandFunction: |
@@ -10,12 +10,8 @@ startCommand:
       args: ["server.py"],
       env: {}
     })
-
-# Top-level port (Smithery routes traffic here)
 port: 8080
-
 configSchema:
   type: object
   properties: {}
   additionalProperties: false
-
