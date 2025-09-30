@@ -3,7 +3,6 @@ anyio==4.11.0
 attrs==25.3.0
 certifi==2025.8.3
 click==8.3.0
-fastmcp==1.0
 h11==0.16.0
 httpcore==1.0.9
 httpx==0.28.1
@@ -32,4 +31,3 @@ typing-inspection==0.4.1
 typing_extensions==4.15.0
 uvicorn==0.37.0
 fastmcp>=2.0.0
-
