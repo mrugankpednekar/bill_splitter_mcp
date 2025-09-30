@@ -1,5 +1,3 @@
-runtime: container
-
 name: splitfast-mcp
 displayName: SplitFast — Group Expense MCP
 description: Minimal expense splitter MCP (create_group, add_expense, balances).
