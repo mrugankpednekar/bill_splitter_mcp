@@ -76,8 +76,9 @@ def balances(group_id: str, secret: str) -> List[Dict]:
         if creditors[j][1]==0: j+=1
     return res
 
+# server.py  (keep your tools; only change the __main__ block)
 if __name__ == "__main__":
     _init_db()
-    # Default FastMCP run() starts STDIO (good for local testing).
-    mcp.run()
+    # Expose Streamable HTTP on 0.0.0.0:8080
+    mcp.run(transport="http", host="0.0.0.0", port=8080)
 
